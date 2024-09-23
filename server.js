@@ -22,7 +22,7 @@ app.get("/api/guide", async (req, res) =>{
     try{
         const guide = await Guide.find({});
         //res.status(200).json({success: true, data: guide});
-        res.status(200).json({data: guide});
+        res.status(200).json({guide});
     }
     catch(error){
         console.log("Error in fetching user guide", error.message);
