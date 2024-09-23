@@ -9,7 +9,7 @@ app.use(express.json());
 
 dotenv.config();
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
     connectDB();
     console.log("Server available");
 })
